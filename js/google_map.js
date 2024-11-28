@@ -1,5 +1,5 @@
 function initMap() {
-    const venueLocation = { lat: 28.251827313497678, lng: 77.28962325295142 };
+    const venueLocation = { lat: 28.25177631231207, lng: 77.28963990633393 };
 
     // Map options
     const map = new google.maps.Map(document.getElementById("map"), {
@@ -17,7 +17,7 @@ function initMap() {
     // Clickable marker opens Google Maps
     marker.addListener("click", () => {
         window.open(
-            "https://www.google.com/maps?q=28.251827313497678,77.28962325295142",
+            "https://www.google.com/maps?q=28.25177631231207,77.28963990633393",
             "_blank"
         );
     });
