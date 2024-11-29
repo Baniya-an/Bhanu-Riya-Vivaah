@@ -713,6 +713,9 @@ h1, h2, h3, h4, h5, h6, figure {
     left: 1em;
     right: 1em;
   }
+  .case-studies-summary {
+    margin-bottom: 1% !important;
+  }
 }
 #fh5co-gallery-list li a .case-studies-summary span {
   text-transform: uppercase;
