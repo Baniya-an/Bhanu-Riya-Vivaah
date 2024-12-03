@@ -71,7 +71,7 @@
 							<h1>Riya &amp; Bhanu</h1>
 							<h2>We Are Getting Married</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
-							<p><a href="#" class="btn btn-default btn-sm" id="save-the-date">Save the date</a></p>
+							<p><a href="bhanu_riya_savethedate.ics" class="btn btn-default btn-sm" id="save-the-date">Save the date</a></p>
 						</div>
 					</div>
 				</div>
@@ -432,37 +432,6 @@
 			minutes: targetDateUtc.getUTCMinutes(),
 			seconds: targetDateUtc.getUTCSeconds(),
 			enableUtc: true // Use UTC to handle IST offset
-		});
-
-		document.getElementById("save-the-date").addEventListener("click", function (e) {
-			e.preventDefault(); // Prevent default link behavior
-
-			const icsContent = `
-		BEGIN:VCALENDAR
-		VERSION:2.0
-		PRODID:-//Your Wedding//Save the Date//EN
-		BEGIN:VEVENT
-		UID:${new Date().getTime()}@wedding.com
-		DTSTAMP:${new Date().toISOString().replace(/[-:]/g, "").split(".")[0]}Z
-		DTSTART:20250116T000000Z
-		DTEND:20250116T235900Z
-		SUMMARY:Our Marriage
-		DESCRIPTION:Don't forget to join us on our special day in Rishikesh!
-		LOCATION:Rishikesh, India
-		BEGIN:VALARM
-		TRIGGER:-P1D
-		ACTION:DISPLAY
-		DESCRIPTION:Reminder: Our marriage is tomorrow!
-		END:VALARM
-		END:VEVENT
-		END:VCALENDAR
-			`;
-
-			const blob = new Blob([icsContent], { type: "text/calendar" });
-			const link = document.createElement("a");
-			link.href = URL.createObjectURL(blob);
-			link.download = "Save-the-Date.ics";
-			link.click();
 		});
 	</script>
 	
