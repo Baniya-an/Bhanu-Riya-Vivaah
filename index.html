@@ -71,7 +71,7 @@
 							<h1>Riya &amp; Bhanu</h1>
 							<h2>We Are Getting Married</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
-							<p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>
+							<p><a href="#" class="btn btn-default btn-sm" id="save-the-date">Save the date</a></p>
 						</div>
 					</div>
 				</div>
@@ -432,6 +432,23 @@
 			minutes: targetDateUtc.getUTCMinutes(),
 			seconds: targetDateUtc.getUTCSeconds(),
 			enableUtc: true // Use UTC to handle IST offset
+		});
+
+		document.getElementById("save-the-date").addEventListener("click", function () {
+			const eventDetails = {
+				text: "Bhanu+Riya Marriage",
+				dates: "20250116/20250116", // YYYYMMDD/YYYYMMDD
+				details: "Don't forget to join us on our special day!",
+				location: "Lotus Gardens- Iris Lawn, Faridabad",
+			};
+
+			const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE` +
+				`&text=${encodeURIComponent(eventDetails.text)}` +
+				`&dates=${eventDetails.dates}` +
+				`&details=${encodeURIComponent(eventDetails.details)}` +
+				`&location=${encodeURIComponent(eventDetails.location)}`;
+
+			window.open(googleCalendarUrl, "_blank");
 		});
 	</script>
 	
