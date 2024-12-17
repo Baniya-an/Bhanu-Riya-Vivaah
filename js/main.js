@@ -230,3 +230,21 @@
 
 
 }());
+
+document.addEventListener("contextmenu", function(e) {
+	e.preventDefault();
+}, false);
+
+function playVideo(videoSrc) {
+	const videoPlayer = document.getElementById('videoPlayer');
+	videoPlayer.src = videoSrc;
+	document.getElementById('videoModal').style.display = 'block';
+	videoPlayer.play();
+}
+
+function closeVideo() {
+	const videoPlayer = document.getElementById('videoPlayer');
+	videoPlayer.pause();
+	videoPlayer.src = "";
+	document.getElementById('videoModal').style.display = 'none';
+}
