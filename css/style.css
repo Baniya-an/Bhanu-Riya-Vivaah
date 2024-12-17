@@ -69,6 +69,12 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: 0 0 20px 0;
 }
 
+img, video {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
 ::-webkit-selection {
   color: #fff;
   background: #F14E95;
