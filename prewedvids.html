@@ -172,26 +172,6 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
-	<script>
-		// Play video without exposing direct link
-		function playVideo(videoSrc) {
-			const videoPlayer = document.getElementById('videoPlayer');
-			videoPlayer.src = videoSrc;
-			document.getElementById('videoModal').style.display = 'block';
-			videoPlayer.play();
-		}
-	
-		// Close video modal
-		function closeVideo() {
-			const videoPlayer = document.getElementById('videoPlayer');
-			videoPlayer.pause();
-			videoPlayer.src = "";
-			document.getElementById('videoModal').style.display = 'none';
-		}
-	
-	</script>
-
-
 	</body>
 </html>
 
